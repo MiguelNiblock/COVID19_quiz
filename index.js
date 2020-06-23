@@ -2,21 +2,27 @@ function repeatButtonListener() {
     console.log('Listening to repeat button')
     
     $('button.repeat').on('click',function(e){
+        console.log('repeat button clicked')
         loadStartPage();
     })
 }
 
-function loadFinalPage(){
-    console.log('Loading final page.')
+function endButtonListener(){
+    console.log('Listening to end button...')
 
-    $('nav').toggleClass('hidden')
-    $('section.QA').html('')
-    $('section.output').html(`
-        <p>Thanks for completing our quiz. We hope you enjoyed it and learned something useful. Your final score is:</p>
-        <p><span class="score">10</span>/10</p>
-        <button type="button" name="Repeat" class="repeat">Repeat Quiz</button>
-    `)
-    repeatButtonListener();
+    $('button.end').on('click',function(e){
+
+        console.log('Loading final page.')
+
+        $('nav').toggleClass('hidden')
+        $('section.QA').html('')
+        $('section.output').html(`
+            <p>Thanks for completing our quiz. We hope you enjoyed it and learned something useful. Your final score is:</p>
+            <p>${correctCount}/10</p>
+            <button type="button" name="Repeat" class="repeat">Repeat Quiz</button>
+        `)
+        repeatButtonListener();
+    })
 }
 
 function nextButtonListener(){
@@ -27,38 +33,28 @@ function nextButtonListener(){
         console.log('Loading next...')
 
         questionCount++;
-        $('nav span.questionCount').text(questionCount)
-        $('nav span.correctCount').text(correctCount)
-        $('nav span.incorrectCount').text(incorrectCount)
+        $('nav span.questionCount').text(questionCount);
 
+        console.log('Current question: '+questionCount)
 
-        if (questionCount<11) {
-            console.log('Current question: '+questionCount)
-
-            $('section.output').html('')
-            $('section.QA').html(`
-            <form>
-                <fieldset>
-                    <legend>How are you?</legend>
-                    <input type="radio" id="ans1" name="answer">
-                    <label for="ans1">Answer</label><br>
-                    <input type="radio" id="ans2" name="answer">
-                    <label for="ans2">Answer</label><br>
-                    <input type="radio" id="ans3" name="answer">
-                    <label for="ans3">Answer</label><br>
-                    <input type="radio" id="ans4" name="answer">
-                    <label for="ans4">Answer</label><br>
-                </fieldset>
-                <button type="submit" class="submit" name="Submit">Submit</button>
-            </form>
-            `)
-            submitListener();
-        }
-        else {
-            loadFinalPage();
-        }
-        
-
+        $('section.output').html('')
+        $('section.QA').html(`
+        <form>
+            <fieldset>
+                <legend>${QAdata[questionCount-1].question}</legend>
+                <input type="radio" id="ans1" name="answer" value="0" required checked>
+                <label for="ans1">${QAdata[questionCount-1].answers[0].answer}</label><br>
+                <input type="radio" id="ans2" name="answer" value="1" required>
+                <label for="ans2">${QAdata[questionCount-1].answers[1].answer}</label><br>
+                <input type="radio" id="ans3" name="answer" value="2" required>
+                <label for="ans3">${QAdata[questionCount-1].answers[2].answer}</label><br>
+                <input type="radio" id="ans4" name="answer" value="3" required>
+                <label for="ans4">${QAdata[questionCount-1].answers[3].answer}</label><br>
+            </fieldset>
+            <button type="submit" class="submit" name="Submit">Submit</button>
+        </form>
+        `)
+        submitListener();
     })
 }
 
@@ -83,6 +79,14 @@ function feedbackMessage(questionCount,isCorrect,answerSubmittedId){
     }
 }
 
+function whichNextButton(questionCount){
+    if (questionCount<10) {
+        return `<button type="submit" class="next"          name="Next">Next</button>`}
+    else {
+        return `<button type="submit" class="end"          name="Summary">End Summary</button>`
+    }
+}
+
 function submitListener(){
     console.log('listening to Submit button')
     $('button.submit').on('click',function(e){
@@ -92,7 +96,7 @@ function submitListener(){
         let answerSubmittedId = parseInt($('input[name="answer"]:checked').val())
         console.log('Answer submitted: '+ answerSubmittedId)
 
-        let isCorrect = answerSubmittedId === QAdata[questionCount].correctanswerId
+        let isCorrect = answerSubmittedId === QAdata[questionCount-1].correctanswerId
 
         console.log('Answer is correct: '+isCorrect)
         if (isCorrect){correctCount++;}
@@ -103,12 +107,22 @@ function submitListener(){
 
         $('section.output').html(`
             ${feedbackMessage(questionCount,isCorrect,answerSubmittedId)}
-            <button type="submit" class="next" name="Next">Next</button>
+            ${whichNextButton(questionCount)}
         `)
 
         $('button.submit').toggleClass('hidden')
 
-        nextButtonListener();
+        let rads = document.getElementsByName("answer")
+
+        for(let i=0; i<rads.length;i++ ){
+            rads[i].disabled = true;
+        } 
+
+        if (questionCount < 10) {
+            nextButtonListener();
+        }
+        else{endButtonListener();}
+        
     })
 }
 
@@ -137,13 +151,13 @@ function startButtonListener(){
         <form>
             <fieldset>
                 <legend>${QAdata[questionCount-1].question}</legend>
-                <input type="radio" id="ans1" name="answer" value=0>
+                <input type="radio" id="ans1" name="answer" value=0 required checked>
                 <label for="ans1">${QAdata[questionCount-1].answers[0].answer}</label><br>
-                <input type="radio" id="ans2" name="answer" value=1>
+                <input type="radio" id="ans2" name="answer" value=1 required>
                 <label for="ans2">${QAdata[questionCount-1].answers[1].answer}</label><br>
-                <input type="radio" id="ans3" name="answer" value=2>
+                <input type="radio" id="ans3" name="answer" value=2 required>
                 <label for="ans3">${QAdata[questionCount-1].answers[2].answer}</label><br>
-                <input type="radio" id="ans4" name="answer" value=3>
+                <input type="radio" id="ans4" name="answer" value=3 required>
                 <label for="ans4">${QAdata[questionCount-1].answers[3].answer}</label><br>
             </fieldset>
             <button type="submit" class="submit" name="Submit">Submit</button>
