@@ -1,7 +1,22 @@
+function repeatButtonListener() {
+    console.log('Listening to repeat button')
+    
+    $('button.repeat').on('click',function(e){
+        loadStartPage();
+    })
+}
+
 function loadFinalPage(){
     console.log('Loading final page.')
 
-    
+    $('nav').toggleClass('hidden')
+    $('section.QA').html('')
+    $('section.output').html(`
+        <p>Thanks for completing our quiz. We hope you enjoyed it and learned something useful. Your final score is:</p>
+        <p><span class="score">10</span>/10</p>
+        <button type="button" name="Repeat" class="repeat">Repeat Quiz</button>
+    `)
+    repeatButtonListener();
 }
 
 function nextButtonListener(){
@@ -16,8 +31,8 @@ function nextButtonListener(){
         if (questionCount<11) {
             console.log('Current question: '+questionCount)
 
-            $('.output').html('')
-            $('.QA').html(`
+            $('section.output').html('')
+            $('section.QA').html(`
             <form>
                 <fieldset>
                     <legend>How are you?</legend>
@@ -78,8 +93,8 @@ function startButtonListener(){
         console.log('current question: ' + questionCount)
 
         $('nav').removeClass('hidden')
-        $('.output').html('')
-        $('.QA').html(`
+        $('section.output').html('')
+        $('section.QA').html(`
         <form>
             <fieldset>
                 <legend>How are you?</legend>
@@ -101,7 +116,7 @@ function startButtonListener(){
 
 function loadStartPage(){
     console.log('loading start page')
-    $('.output').html(`
+    $('section.output').html(`
     <p>These questions will touch on some important issues regarding COVID19. By completing this quiz, you'll know how prepared you are, as well as gain valuable answers after each question. All information is referenced from official sources.</p>
     <button type="button" class="start" name="Start">Start Quiz</button>`
     )
