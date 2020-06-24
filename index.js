@@ -71,9 +71,9 @@ function feedbackMessage(questionCount,isCorrect,answerSubmittedId){
         let correctAnsId = QAdata[questionCount-1].correctanswerId
         let correctAnswer = QAdata[questionCount-1].answers[correctAnsId].answer
         
-        return `<p>Incorrect!</p>
+        return `<p class="bold">Incorrect!</p>
                 <p>${response}</p>
-                <p>The correct answer is:</p>
+                <p class="bold">The correct answer is:</p>
                 <p>${correctAnswer}</p>
                 `
     }

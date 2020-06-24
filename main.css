@@ -1,46 +1,94 @@
 .hidden {
     display: none;
+    visibility: hidden;
 }
-
+.bold{
+    font-weight: 1000;
+}
 body {
     /* font-family: 'Electrolize', sans-serif; */
     /* font-family: 'Orbitron', sans-serif; */
     /* font-family: 'MuseoModerno', cursive; */
     font-family: 'Quantico', sans-serif;
     background-image: url("https://static.politico.com/b6/64/b13e1e86467fa4233784ed18bb64/politico-friday-5-color.jpg");
+    background-size: 100%;
 }
 header {
-    background-color: rgb(14, 20, 31);
+    background-color: rgba(14, 20, 31,0.95);
     color: white;
     margin-bottom: 30px;
     margin-left:40px;
     margin-right:40px;
-    /* padding: 10px; */
+    margin-top: 10px;
+    padding:10px;
+    border: 0px solid black;
+    border-radius: 10px;
 }
 section.output {
-    background-color: rgb(28, 41, 59);
+    background-color: rgba(28, 41, 59,0.95);
     color: white;
     margin-left:40px;
     margin-right:40px;
     margin-bottom: 10px;
-    /* padding: 10px; */
+    border: 0px solid black;
+    border-radius: 10px;
 }
 section.QA {
-    background-color: rgb(45, 40, 56);
+    background-color: rgba(45, 40, 56,0.95);
     color: white;
     margin-left:40px;
     margin-right:40px;
+    border: 0px solid black;
+    border-radius: 10px;
 }
-
 button {
     margin: 10px;
-    background-color: rgb(59, 33, 83);
+    background-color:  rgb(108, 51, 160);
     color: white;
+    font-size: 32px;
+}
+button:hover {
+    background-color: rgb(153, 98, 203);
 }
 footer{
     margin-left: 40px;
+    margin-top: 40px;
+    color: white;
+    background-color: rgba(14, 20, 31,0.45);
+    position: absolute;
+    border: 0px solid black;
+    border-radius: 10px;
 }
-
-nav > * {
+li {
     display: inline-block;
 }
+li::before {
+    content: "|";
+}
+li:hover {
+    color: #95c7cf;
+    font-size: 25px;
+}
+legend {
+    font-size: 35px;
+}
+p {
+    margin:0;
+    padding: 20px;
+}
+h1 {
+    margin:10px;
+    display: inline-block;
+}
+header img {
+    width: 50px;
+    display: inline-block;
+}
+input {
+    margin-top: 30px;
+}
+label:hover {
+    color: #95d9e3;
+    font-size: 25px;
+}
+
