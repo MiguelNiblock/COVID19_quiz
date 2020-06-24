@@ -1,3 +1,46 @@
 .hidden {
     display: none;
 }
+
+body {
+    /* font-family: 'Electrolize', sans-serif; */
+    /* font-family: 'Orbitron', sans-serif; */
+    /* font-family: 'MuseoModerno', cursive; */
+    font-family: 'Quantico', sans-serif;
+    background-image: url("https://static.politico.com/b6/64/b13e1e86467fa4233784ed18bb64/politico-friday-5-color.jpg");
+}
+header {
+    background-color: rgb(14, 20, 31);
+    color: white;
+    margin-bottom: 30px;
+    margin-left:40px;
+    margin-right:40px;
+    /* padding: 10px; */
+}
+section.output {
+    background-color: rgb(28, 41, 59);
+    color: white;
+    margin-left:40px;
+    margin-right:40px;
+    margin-bottom: 10px;
+    /* padding: 10px; */
+}
+section.QA {
+    background-color: rgb(45, 40, 56);
+    color: white;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+button {
+    margin: 10px;
+    background-color: rgb(59, 33, 83);
+    color: white;
+}
+footer{
+    margin-left: 40px;
+}
+
+nav > * {
+    display: inline-block;
+}

@@ -21,3 +21,17 @@ coronavirus_icon credits
 no-virus_icon credit
 
 `Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>`
+
+fonts
+
+https://fonts.google.com/specimen/MuseoModerno?sidebar.open&selection.family=MuseoModerno
+
+https://fonts.google.com/specimen/Quantico
+
+https://fonts.google.com/specimen/Orbitron
+
+https://fonts.google.com/specimen/Electrolize#standard-styles
+
+https://fonts.google.com/specimen/Monda
+
+https://fonts.google.com/specimen/Rajdhani
