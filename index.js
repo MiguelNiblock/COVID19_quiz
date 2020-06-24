@@ -52,6 +52,7 @@ function nextButtonListener(){
                 <label for="ans4">${QAdata[questionCount-1].answers[3].answer}</label><br>
             </fieldset>
             <button type="submit" class="submit" name="Submit">Submit</button>
+            <br>
         </form>
         `)
         submitListener();
@@ -108,6 +109,7 @@ function submitListener(){
         $('section.output').html(`
             ${feedbackMessage(questionCount,isCorrect,answerSubmittedId)}
             ${whichNextButton(questionCount)}
+            <br>
         `)
 
         $('button.submit').toggleClass('hidden')
@@ -161,6 +163,7 @@ function startButtonListener(){
                 <label for="ans4">${QAdata[questionCount-1].answers[3].answer}</label><br>
             </fieldset>
             <button type="submit" class="submit" name="Submit">Submit</button>
+            <br>
         </form>
         `)
         submitListener();
@@ -171,7 +174,8 @@ function loadStartPage(){
     console.log('loading start page')
     $('section.output').html(`
     <p>These questions will touch on some important issues regarding COVID19. By completing this quiz, you'll know how prepared you are, as well as gain valuable answers after each question. All information is referenced from official sources.</p>
-    <button type="button" class="start" name="Start">Start Quiz</button>`
+    <button type="button" class="start" name="Start">Start Quiz</button>
+    <br>`
     )
     startButtonListener();
 }
