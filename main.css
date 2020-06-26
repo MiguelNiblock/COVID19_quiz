@@ -69,11 +69,14 @@ footer{
 li {
     display: inline-block;
 }
+li {
+    color: #95c7cf;
+}
 li::before {
     content: "|";
 }
 li:hover {
-    color: #95c7cf;
+    color: white;
     font-size: 25px;
 }
 legend {
@@ -94,8 +97,11 @@ header img {
 input {
     margin-top: 30px;
 }
-label:hover {
+.hoverblue:hover {
     color: #95d9e3;
     font-size: 25px;
+}
+.gray {
+    color: gray;
 }
 

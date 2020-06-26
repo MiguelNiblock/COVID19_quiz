@@ -1,13 +1,17 @@
-- [ ] try using a virus icon as radio button alternative?
+- [ ] try using a virus icon as radio button alternative? 
+- https://stackoverflow.com/questions/17541614/use-images-instead-of-radio-buttons 
+- https://gist.github.com/rcotrina94/7828886
 - [ ] before every feedback, include an icon of a "doctor" speaking back at user
-- [ ] in the feedback screen, deactivate hover response in answer labels
+- [x] in the feedback screen, deactivate hover response in answer labels
+    - [ ] also make answers grayed out, to bring attention to feedback
 - [ ] in feedback screen, colorize with green the correct answer.
     - [ ] if answer is incorrect, colorize chosen answer in red
     - [ ] for the others, use the hover color
-- [ ] add small screen view in css
+- [x] add float grid functionality
+- [ ] use a floating grid for the progress stats. give col-4 to each.
+- [x] make an element active on every page, to enable full keyboard operation, from beginning to end, to repeat quiz
 - [ ] when radio button is active, make the corresponding label respond as if you were hovering. can a state of one element produce a response in a different one?
+- when a radio input is checked, JQ.toggleClass on all the answers
 - [ ] make buttons prettier.
-    - [ ] spacing is tricky. Adding padding to section.output, interferes with the .hidden functionality.
+    - [x] spacing is tricky. Adding padding to section.output, interferes with the .hidden functionality.
 - [ ] disable the default round line around the question, from the fieldset?
-
-testing new branch
