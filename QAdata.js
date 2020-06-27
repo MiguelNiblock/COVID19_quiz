@@ -1,28 +1,28 @@
 QAdata = [
     {question : 
-        `What is coronavirus disease?`,
+        `What is the coronavirus disease?`,
     answers : [
         {answer:`A fake myth invented with the goal of depriving people of their liberty`,
         response:`You watch too many conspiracy theory documentaries`},
-        {answer:`An infectious disease caused by a newly discovered coronavirus`,
-        response:`You got it! You're on top of things. Congratulations`},
         {answer:`A disease caused by excesively drinking corona beer. (The Mexican beer company that just closed after infecting the whole world)`,
         response:`LOL You can't be seriously thinking this. But it's a funny answer`},
+        {answer:`An infectious disease caused by a newly discovered coronavirus`,
+        response:`You got it! You're on top of things. Congratulations`},
         {answer:`A disease experienced by royal families who wear crowns. (Corona means Crown in Spanish)`,
         response:`This might actually sound true if you were living inside a hole since the end of 2019. Do not feel ashamed though; By the end of this test you'll be all caught up!`}
     ],
-    correctanswerId : 1},
+    correctanswerId : 2},
     {question : 
-        `How does COVID-19 virus spread?`,
+        `How does the COVID-19 virus spread?`,
     answers : [
-        {answer:`You get it if you have Chinese friends.`,
-        response:`You should be ashamed of yourself for thinking this.`},
         {answer:`Spreads because people give it too much importance. You attract what you put out there.`,
         response:`Yeah... no. Unfortunately you can get it whether you're aware of it or not.`},
+        {answer:`Through contaminated food and water.`,
+        response:`This might actually sound true if you hadn't ever heard of it. Do not feel ashamed though; By the end of this test you'll be all caught up!`},
         {answer:`Through droplets of saliva or discharge from the nose when an infected person coughs or sneezes,`,
         response:`Yes! Through any fluids that emanate from the face.`},
-        {answer:`Through contaminated food and water.`,
-        response:`This might actually sound true if you hadn't ever heard of it. Do not feel ashamed though; By the end of this test you'll be all caught up!`}
+        {answer:`You get it if you have Chinese friends.`,
+        response:`You should be ashamed of yourself for thinking this.`}        
     ],
     correctanswerId : 2},
     {question : 
@@ -54,16 +54,16 @@ QAdata = [
     {question : 
         `When should you seek medical care?`,
     answers : [
+        {answer:`Never. I can cure myself with the power of my mind and my supercharged crystals.`,
+        response:`Knock yourself by all means. You can always change your mind when it gets rough.`},
         {answer:`If you have minor symptoms, such as a slight cough or a mild fever.`,
         response:`In this case you should stay at home, self-isolate, and monitor your symptoms.`},
         {answer:`If you have difficulty breathing or pain/pressure in the chest.`,
         response:`If possible, call your health care provider in advance, so he/she can direct you to the right health facility.`},
         {answer:`As soon as possible after having contact with someone who is infected.`,
-        response:`This doesn't guarantee that you'll be infected, but you should self-quarantine in case you are already contagious without developing symptoms.`},
-        {answer:`Never. I can cure myself with the power of my mind and my supercharged crystals.`,
-        response:`Knock yourself by all means. You can always change your mind when it gets rough.`}
+        response:`This doesn't guarantee that you'll be infected, but you should self-quarantine in case you are already contagious without developing symptoms.`}
     ],
-    correctanswerId : 1},
+    correctanswerId : 2},
     {question : 
         `Can children and adolescents catch COVID-19?`,
     answers : [
@@ -86,7 +86,7 @@ QAdata = [
         response:`Sweat can make the mask become wet more quickly which makes it difficult to breathe and promotes the growth of microorganisms. The important preventive measure during exercise is to maintain physical distance of at least one meter from others. `},
         {answer:`Only if you're running. But not if you're riding a bicycle.`,
         response:`Sweat can make the mask become wet more quickly which makes it difficult to breathe and promotes the growth of microorganisms. The important preventive measure during exercise is to maintain physical distance of at least one meter from others. `},
-        {answer:`Only if it's summer time. Winter brings COVID`,
+        {answer:`Only if it's winter. Summer is COVID-safe`,
         response:`Sweat can make the mask become wet more quickly which makes it difficult to breathe and promotes the growth of microorganisms. The important preventive measure during exercise is to maintain physical distance of at least one meter from others. `}
     ],
     correctanswerId : 1},
