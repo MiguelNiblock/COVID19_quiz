@@ -10,13 +10,14 @@ body {
     /* font-family: 'Orbitron', sans-serif; */
     /* font-family: 'MuseoModerno', cursive; */
     font-family: 'Quantico', sans-serif;
+    font-size: 80%;
     background-image: url("https://static.politico.com/b6/64/b13e1e86467fa4233784ed18bb64/politico-friday-5-color.jpg");
     background-size: 100%;
 }
 header {
     background-color: rgba(14, 20, 31,0.95);
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     margin-left:40px;
     margin-right:40px;
     margin-top: 10px;
@@ -73,13 +74,13 @@ li {
     color: #95c7cf;
 }
 li::before {
-    content: "|";
+    content: "| ";
 }
 li:hover {
     color: white;
 }
 legend {
-    font-size: 35px;
+    font-size: 130%;
 }
 p {
     margin:0;
@@ -87,22 +88,41 @@ p {
 }
 h1 {
     margin:10px;
-    display: inline-block;
-}
-header img {
-    width: 50px;
-    display: inline-block;
-}
-input {
-    margin-top: 30px;
-    width: 15px;
-    height: 15px;
-}
-input[type="radio"]:checked+label {
-    color: #95d9e3;
-    font-size: 25px;
 }
 .gray {
     color: gray;
 }
-
+label {
+    line-height: 2;
+    cursor: pointer;
+}
+[type=radio] { 
+/*     position: absolute; */
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+/* IMAGE STYLES */
+[type=radio] + img {
+    width: 27px;
+    vertical-align: -20%;
+    filter: grayscale(1);
+/*     filter: saturate(0); */
+}
+label:hover {
+    filter: brightness(.9);
+    transition: all 100ms ease-in;
+}
+label:focus-within {
+    color: #95d9e3;
+    transition: all 300ms ease-in;
+/*     font-size: 110%; */
+}
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+/*     outline: 1px dashed #95d9e3; */
+    width : 30px;
+    vertical-align: -24%;
+    filter: invert();
+    transition: all 200ms ease-in;
+}
