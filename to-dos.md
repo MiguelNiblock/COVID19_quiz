@@ -4,9 +4,9 @@
 - [ ] before every feedback, include an icon of a "doctor" speaking back at user
 - [x] in the feedback screen, deactivate hover response in answer labels
     - [ ] also make answers grayed out, to bring attention to feedback
-- [ ] in feedback screen, colorize with green the correct answer.
-    - [ ] if answer is incorrect, colorize chosen answer in red
-    - [ ] for the others, use the hover color
+- [x] in feedback screen, colorize with green the correct answer.
+    - [x] if answer is incorrect, colorize chosen answer in red
+    - [x] for the others, use the hover color
 - [x] add float grid functionality
 - [ ] use a floating grid for the progress stats. give col-4 to each.
 - [x] make an element active on every page, to enable full keyboard operation, from beginning to end, to repeat quiz

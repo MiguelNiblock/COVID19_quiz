@@ -45,22 +45,22 @@ function nextButtonListener(){
         <form>
             <fieldset>
                 <legend>${QAdata[questionCount-1].question}</legend>
-                <label for="ans1" class="hoverblue">
+                <label for="ans1">
                     <input type="radio" id="ans1" name="answer" value="0" required checked>
                     <img src="coronavirus_icon.png">
                     ${QAdata[questionCount-1].answers[0].answer}
                 </label><br>
-                <label for="ans2" class="hoverblue">
+                <label for="ans2">
                     <input type="radio" id="ans2" name="answer" value="1" required>
                     <img src="coronavirus_icon.png">
                     ${QAdata[questionCount-1].answers[1].answer}
                 </label><br>
-                <label for="ans3" class="hoverblue">
+                <label for="ans3">
                     <input type="radio" id="ans3" name="answer" value="2" required>
                     <img src="coronavirus_icon.png">
                     ${QAdata[questionCount-1].answers[2].answer}
                 </label><br>
-                <label for="ans4" class="hoverblue">
+                <label for="ans4">
                     <input type="radio" id="ans4" name="answer" value="3" required>
                     <img src="coronavirus_icon.png">
                     ${QAdata[questionCount-1].answers[3].answer}
@@ -81,7 +81,7 @@ function feedbackMessage(questionCount,isCorrect,answerSubmittedId){
     console.log('Response: ' + response)
 
     if (isCorrect){
-        return `<p>Correct!</p>
+        return `<p class="bold">Correct!</p>
                 <p>${response}</p>`
     }
     else {
@@ -113,11 +113,20 @@ function submitListener(){
         let answerSubmittedId = parseInt($('input[name="answer"]:checked').val())
         console.log('Answer submitted: '+ answerSubmittedId)
 
-        let isCorrect = answerSubmittedId === QAdata[questionCount-1].correctanswerId
+        let correctAnsId = parseInt(QAdata[questionCount-1].correctanswerId)
 
+        let isCorrect = answerSubmittedId === correctAnsId
         console.log('Answer is correct: '+isCorrect)
-        if (isCorrect){correctCount++;}
-        else{incorrectCount++;}
+
+        if (isCorrect){
+            correctCount++; 
+            $('input[name="answer"]:checked').parent().toggleClass('correct')
+        }
+        else{
+            incorrectCount++;
+            $('input[name="answer"]:checked').parent().toggleClass('wrong')
+            $(`input[value=${correctAnsId}]`).parent().toggleClass('correct')
+        }
 
         $('nav span.correctCount').text(correctCount)
         $('nav span.incorrectCount').text(incorrectCount)
@@ -131,7 +140,7 @@ function submitListener(){
 
         $('button.submit').toggleClass('hidden')
 
-        $('.hoverblue').toggleClass('hoverblue gray')
+        $('label').toggleClass('gray')
 
         let rads = document.getElementsByName("answer")
 

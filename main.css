@@ -2,15 +2,26 @@
     display: none;
     visibility: hidden;
 }
+.wrong {
+/*     text-decoration: line-through solid red; */
+    border: 1px dashed red;
+}
+.correct {
+/*     text-decoration: underline solid #00ef00; */
+    border: 1px dashed #00ef00;
+}
 .bold{
     font-weight: 1000;
+}
+.gray {
+    color: #c8c8c8;
 }
 body {
     /* font-family: 'Electrolize', sans-serif; */
     /* font-family: 'Orbitron', sans-serif; */
     /* font-family: 'MuseoModerno', cursive; */
     font-family: 'Quantico', sans-serif;
-    font-size: 80%;
+    font-size: 70%;
     background-image: url("https://static.politico.com/b6/64/b13e1e86467fa4233784ed18bb64/politico-friday-5-color.jpg");
     background-size: 100%;
 }
@@ -45,7 +56,7 @@ section.QA {
 button {
     background-color:  rgb(108, 51, 160);
     color: white;
-    font-size: 32px;
+    font-size: 140%;
     padding: 10px;
     border: 0px solid black;
     border-radius: 10px;
@@ -90,9 +101,6 @@ p {
 }
 h1 {
     margin:10px;
-}
-.gray {
-    color: gray;
 }
 label {
     line-height: 2;
