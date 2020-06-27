@@ -8,7 +8,7 @@
     - [x] if answer is incorrect, colorize chosen answer in red
     - [x] for the others, use the hover color
 - [x] add float grid functionality
-- [ ] use a floating grid for the progress stats. give col-4 to each.
+- [x] improve nav bar appearance
 - [x] make an element active on every page, to enable full keyboard operation, from beginning to end, to repeat quiz
 - [x] when radio button is active, make the corresponding label respond as if you were hovering. can a state of one element produce a response in a different one?
 - when a radio input is checked, JQ.toggleClass on all the answers
@@ -16,3 +16,4 @@
 - [ ] make buttons prettier.
     - [x] spacing is tricky. Adding padding to section.output, interferes with the .hidden functionality.
 - [ ] disable the default round line around the question, from the fieldset?
+- [x] give the user a cookie in the final page

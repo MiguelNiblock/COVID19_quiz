@@ -1,4 +1,4 @@
-icon sets
+icon sets ideas
 
 https://www.flaticon.com/search?word=virus
 
@@ -6,7 +6,7 @@ https://www.flaticon.com/packs/hygiene-and-disinfection-4
 
 https://www.flaticon.com/packs/virus-outbreak-1
 
-background article source
+background image article source
 
 https://www.politico.com/news/magazine/2020/03/19/coronavirus-effect-economy-life-society-analysis-covid-135579
 
@@ -22,7 +22,7 @@ no-virus_icon credit
 
 `Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>`
 
-fonts
+fonts ideas
 
 https://fonts.google.com/specimen/MuseoModerno?sidebar.open&selection.family=MuseoModerno
 

@@ -118,6 +118,18 @@ h1 {
     margin:10px;
     display: inline-block;
 }
+h2 {
+    margin-left: 50px;
+}
+.final {
+    display: inline-block;
+    vertical-align: top;
+}
+.gif {
+    display: inline-block;
+    margin: 10px auto;
+    height: 300px;
+}
 label {
     line-height: 2;
     cursor: pointer;

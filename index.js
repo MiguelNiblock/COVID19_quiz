@@ -15,10 +15,13 @@ function endButtonListener(){
         console.log('Loading final page.')
 
         $('nav').toggleClass('hidden')
-        $('section.QA').html('')
+        $('section.QA').html(`
+            <p class="final">For all your effort, here's a cookie. :) --></p>
+            <img src="https://media0.giphy.com/media/5t3FyUHyJiUyA/giphy.gif?cid=ecf05e4788764498652a09e9805f7519074a46b9f86a7801&amp;rid=giphy.gif" class="gif">
+        `)
         $('section.output').html(`
             <p>Thanks for completing our quiz. We hope you enjoyed it and learned something useful. Your final score is:</p>
-            <p>${correctCount}/10</p>
+            <h2>${correctCount}/10</h2>
             <button type="button" name="Repeat" class="repeat">Repeat Quiz</button>
             <br>
         `)
@@ -218,6 +221,7 @@ function startButtonListener(){
 
 function loadStartPage(){
     console.log('loading start page')
+    $('section.QA').html('')
     $('section.output').html(`
     <p>These questions will touch on some important issues regarding COVID19. By completing this quiz, you'll know how prepared you are, as well as gain valuable answers after each question. All information is referenced from official sources.</p>
     <button type="button" class="start" name="Start" autofocus>Start Quiz</button>
