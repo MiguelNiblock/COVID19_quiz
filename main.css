@@ -77,7 +77,6 @@ li::before {
 }
 li:hover {
     color: white;
-    font-size: 25px;
 }
 legend {
     font-size: 35px;
@@ -96,8 +95,10 @@ header img {
 }
 input {
     margin-top: 30px;
+    width: 15px;
+    height: 15px;
 }
-.hoverblue:hover {
+input[type="radio"]:checked+label {
     color: #95d9e3;
     font-size: 25px;
 }

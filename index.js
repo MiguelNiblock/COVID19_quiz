@@ -163,13 +163,13 @@ function startButtonListener(){
             <fieldset>
                 <legend>${QAdata[questionCount-1].question}</legend>
                 <input type="radio" id="ans1" name="answer" value=0 required checked>
-                <label for="ans1" class="hoverblue">${QAdata[questionCount-1].answers[0].answer}</label><br>
+                <label for="ans1">${QAdata[questionCount-1].answers[0].answer}</label><br>
                 <input type="radio" id="ans2" name="answer" value=1 required>
-                <label for="ans2" class="hoverblue">${QAdata[questionCount-1].answers[1].answer}</label><br>
+                <label for="ans2">${QAdata[questionCount-1].answers[1].answer}</label><br>
                 <input type="radio" id="ans3" name="answer" value=2 required>
-                <label for="ans3" class="hoverblue">${QAdata[questionCount-1].answers[2].answer}</label><br>
+                <label for="ans3">${QAdata[questionCount-1].answers[2].answer}</label><br>
                 <input type="radio" id="ans4" name="answer" value=3 required>
-                <label for="ans4" class="hoverblue">${QAdata[questionCount-1].answers[3].answer}</label><br>
+                <label for="ans4">${QAdata[questionCount-1].answers[3].answer}</label><br>
             </fieldset>
             <button type="submit" class="submit" name="Submit">Submit</button>
             <br>
