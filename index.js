@@ -40,6 +40,7 @@ function nextButtonListener(){
         console.log('Current question: '+questionCount)
 
         $('section.output').html('')
+        $('section.output').toggleClass('hidden')
         $('section.QA').html(`
         <form>
             <fieldset>
@@ -126,6 +127,7 @@ function submitListener(){
             ${whichNextButton(questionCount)}
             <br>
         `)
+        $('section.output').toggleClass('hidden')
 
         $('button.submit').toggleClass('hidden')
 
@@ -170,6 +172,7 @@ function startButtonListener(){
         $('nav span.incorrectCount').text(incorrectCount)
 
         $('section.output').html('')
+        $('section.output').toggleClass('hidden')
         $('section.QA').html(`
         <form>
             <fieldset>

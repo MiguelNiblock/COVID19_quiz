@@ -1,4 +1,4 @@
-- [ ] try using a virus icon as radio button alternative? 
+- [x] try using a virus icon as radio button alternative? 
 - https://stackoverflow.com/questions/17541614/use-images-instead-of-radio-buttons 
 - https://gist.github.com/rcotrina94/7828886
 - [ ] before every feedback, include an icon of a "doctor" speaking back at user
