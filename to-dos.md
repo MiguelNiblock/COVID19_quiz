@@ -12,6 +12,7 @@
 - [x] make an element active on every page, to enable full keyboard operation, from beginning to end, to repeat quiz
 - [ ] when radio button is active, make the corresponding label respond as if you were hovering. can a state of one element produce a response in a different one?
 - when a radio input is checked, JQ.toggleClass on all the answers
+- requires undoing current hover response.
 - [ ] make buttons prettier.
     - [x] spacing is tricky. Adding padding to section.output, interferes with the .hidden functionality.
 - [ ] disable the default round line around the question, from the fieldset?
