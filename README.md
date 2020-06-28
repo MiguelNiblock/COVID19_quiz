@@ -2,7 +2,7 @@
 
 Single-page client-side app built on Javascript, HTML and CSS that implements a multiple-choice quiz meant to test your COVID preparedness, and give you answers to important issues on the subject. 
 
-Access it live at: https://covid19quiz--muniblock.repl.co/
+Access it live at: https://miguelniblock.github.io/COVID19_quiz/
 
 Questions and answers are derived from information by World Health Organization. https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters
 
