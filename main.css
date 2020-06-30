@@ -162,11 +162,12 @@ label:focus-within {
         border-left: none;
         border-right: none;
     }
-    ul {
-        margin-left: 2px;
-        margin-right: 2px;
+    nav {
+        display: block;
+        margin: 0 0;
     }
-    li {
-        padding: 0 2px;
+    ul {
+        display: block;
+        margin: 0 auto;
     }
 }
