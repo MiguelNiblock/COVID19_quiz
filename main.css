@@ -158,10 +158,6 @@ label:focus-within {
     body {
         font-size: 80%;
     }
-    .center {
-        border-left: none;
-        border-right: none;
-    }
     nav {
         display: block;
     }
@@ -170,4 +166,10 @@ label:focus-within {
         width: 100%;
         text-align: center;
     }
+}
+@media only screen and (max-width: 486px) {
+    .center {
+    border-left: none;
+    border-right: none;
+}
 }
