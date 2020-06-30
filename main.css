@@ -28,9 +28,7 @@ body {
 header {
     background-color: rgba(14, 20, 31,0.95);
     color: white;
-    margin-bottom: 10px;
-    /* margin-left:40px;
-    margin-right:40px; */
+    margin-bottom: 10px;    
     margin-top: 10px;
     padding:10px;
     border: 0px solid black;
@@ -39,8 +37,6 @@ header {
 section.output {
     background-color: rgba(28, 41, 59,0.95);
     color: white;
-    /* margin-left:40px;
-    margin-right:40px; */
     margin-bottom: 10px;
     border: 0px solid black;
     border-radius: 10px;
@@ -48,10 +44,9 @@ section.output {
 section.QA {
     background-color: rgba(45, 40, 56,0.95);
     color: white;
-    /* margin-left:40px;
-    margin-right:40px; */
     border: 0px solid black;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 button {
     background-color:  rgb(108, 51, 160);
@@ -69,12 +64,9 @@ button {
 button:hover {
     background-color: rgb(153, 98, 203);
 }
-footer{
-    /* margin-left: 40px;
-    margin-top: 40px; */
+.footer{
     color: white;
     background-color: rgba(14, 20, 31,0.45);
-    position: absolute;
     border: 0px solid black;
     border-radius: 10px;
 }
