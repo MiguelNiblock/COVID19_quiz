@@ -21,7 +21,7 @@ body {
     /* font-family: 'Orbitron', sans-serif; */
     /* font-family: 'MuseoModerno', cursive; */
     font-family: 'Quantico', sans-serif;
-    font-size: 70%;
+    font-size: 75%;
     background-image: url("https://static.politico.com/b6/64/b13e1e86467fa4233784ed18bb64/politico-friday-5-color.jpg");
     background-size: 100%;
 }
@@ -90,9 +90,6 @@ li {
     border-left: 1px solid white;
     border-right: 1px solid white;
 }
-/* li::before {
-    content: "| ";
-} */
 li:hover {
     color: #95c7cf;
 /*     color: #b395cf; */
@@ -155,4 +152,17 @@ label:focus-within {
     vertical-align: -24%;
     filter: invert();
     transition: all 200ms ease-in;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        font-size: 85%;
+    }
+    .center {
+        border-left: none;
+        border-right: none;
+    }
+    ul {
+        margin-right: 30px;
+    }
 }
