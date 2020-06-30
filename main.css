@@ -156,13 +156,17 @@ label:focus-within {
 
 @media only screen and (max-width: 500px) {
     body {
-        font-size: 85%;
+        font-size: 80%;
     }
     .center {
         border-left: none;
         border-right: none;
     }
     ul {
-        margin-right: 30px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    li {
+        padding: 0 2px;
     }
 }
