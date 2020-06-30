@@ -7,6 +7,7 @@
         <meta name="description" property="og:description" content="Single-page client-side app built on Javascript, HTML and CSS that implements a multiple-choice quiz meant to test your COVID preparedness, and give you answers to important issues on the subject. ">
         <meta name="image" property="og:image" content="covid19quiz_screenshot.png">
         <meta name="author" content="Miguel Niblock"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> 
@@ -20,17 +21,20 @@
         <link rel="stylesheet" type="text/css" href="./main.css">
     </head>
 <body>
-<header role="banner">
-    <h1>COVID19 Preparedness Quiz</h1>
-    <nav role="navigation" class="hidden">
-        <ul>
-            <li>Question: <span class="questionCount">1</span>/10</li>
-            <li class="center">Correct: <span class="correctCount">0</span></li>
-            <li>Incorrect: <span class="incorrectCount">0</span></li>
-        </ul>
-    </nav>
-</header>
-
+<div class="row">
+    <div class="col-12">
+        <header role="banner">
+            <h1>COVID19 Preparedness Quiz</h1>
+            <nav role="navigation" class="hidden">
+                <ul>
+                    <li>Question: <span class="questionCount">1</span>/10</li>
+                    <li class="center">Correct: <span class="correctCount">0</span></li>
+                    <li>Incorrect: <span class="incorrectCount">0</span></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+</div>
 <main role="main">
 
     <div class="row">
