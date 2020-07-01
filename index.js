@@ -3,7 +3,7 @@ function repeatButtonListener() {
     
     $('button.repeat').on('click',function(e){
         console.log('repeat button clicked')
-        // $('section.output').toggleClass('expanded collapsed')
+        $('nav').html('')
         loadStartPage();
     })
 }
@@ -16,7 +16,6 @@ function endButtonListener(){
         console.log('Loading final page.')
 
         $('nav').toggleClass('transparent')
-        // $('nav').html('')
         $('section.output').html(`
             <p>Thanks for completing our quiz. We hope you enjoyed it and learned something useful. Your final score is:</p>
             <h2>${correctCount}/10</h2>
