@@ -8,11 +8,8 @@ Questions and answers are derived from information by World Health Organization.
 
 ### Technical Details
 
+- Mobile-first approach, Responsive design, intuitive interface.
 - Fully usable by keyboard & Ally friendly.
-- Responsive design, intuitive interface.
-- Content is injected through JQuery on('click') functions.
-- Shows user one question at a time, no skipping.
-- Includes: A start page, question page, feedback page and final page.
-    - Feedback page includes additional comments based on your answer, and highlights/ reveals the correct answer.
-- Keeps track of number of correct and incorrect answers.
-- Provides the final score at the end of the quiz. (10 questions total)
+- Animations & transitions use custom CSS. No libraries like bootstrap.
+- HTML content is injected through JQuery on('click') functions.
+- User receives feedback based on their answer.
