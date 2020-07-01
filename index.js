@@ -3,7 +3,6 @@ function repeatButtonListener() {
     
     $('button.repeat').on('click',function(e){
         console.log('repeat button clicked')
-        $('nav').html('')
         loadStartPage();
     })
 }
@@ -26,6 +25,9 @@ function endButtonListener(){
             <p class="final">For all your effort, here's a cookie. :) --></p>
             <img src="https://media0.giphy.com/media/5t3FyUHyJiUyA/giphy.gif?cid=ecf05e4788764498652a09e9805f7519074a46b9f86a7801&amp;rid=giphy.gif" class="gif">
         `)
+        setTimeout(function() {
+            $('nav').html('')
+        }, 2000);
         repeatButtonListener();
         $('button.repeat').focus();
     })
