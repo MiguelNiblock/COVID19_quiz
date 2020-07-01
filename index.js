@@ -3,6 +3,7 @@ function repeatButtonListener() {
     
     $('button.repeat').on('click',function(e){
         console.log('repeat button clicked')
+        // $('section.output').toggleClass('expanded collapsed')
         loadStartPage();
     })
 }
@@ -14,16 +15,17 @@ function endButtonListener(){
 
         console.log('Loading final page.')
 
-        $('nav').toggleClass('hidden')
-        $('section.QA').html(`
-            <p class="final">For all your effort, here's a cookie. :) --></p>
-            <img src="https://media0.giphy.com/media/5t3FyUHyJiUyA/giphy.gif?cid=ecf05e4788764498652a09e9805f7519074a46b9f86a7801&amp;rid=giphy.gif" class="gif">
-        `)
+        $('nav').toggleClass('transparent')
+        // $('nav').html('')
         $('section.output').html(`
             <p>Thanks for completing our quiz. We hope you enjoyed it and learned something useful. Your final score is:</p>
             <h2>${correctCount}/10</h2>
             <button type="button" name="Repeat" class="repeat">Repeat Quiz</button>
             <br>
+        `)
+        $('section.QA').html(`
+            <p class="final">For all your effort, here's a cookie. :) --></p>
+            <img src="https://media0.giphy.com/media/5t3FyUHyJiUyA/giphy.gif?cid=ecf05e4788764498652a09e9805f7519074a46b9f86a7801&amp;rid=giphy.gif" class="gif">
         `)
         repeatButtonListener();
         $('button.repeat').focus();
@@ -42,8 +44,9 @@ function nextButtonListener(){
 
         console.log('Current question: '+questionCount)
 
-        $('section.output').html('')
-        $('section.output').toggleClass('hidden')
+        // $('section.output').html('')
+        // $('section.output').toggleClass('hidden')
+        $('section.output').toggleClass('collapsed expanded')
         $('section.QA').html(`
         <form>
             <fieldset>
@@ -139,7 +142,7 @@ function submitListener(){
             ${whichNextButton(questionCount)}
             <br>
         `)
-        $('section.output').toggleClass('hidden')
+        $('section.output').toggleClass('collapsed expanded')
 
         $('button.submit').toggleClass('hidden')
 
@@ -177,14 +180,21 @@ function startButtonListener(){
 
         questionCount++;
         console.log('current question: ' + questionCount)
-
-        $('nav').removeClass('hidden')
+        $('nav').html(`
+            <ul>
+                <li>Question: <span class="questionCount">1</span>/10</li>
+                <li class="center">Correct: <span class="correctCount">0</span></li>
+                <li>Incorrect: <span class="incorrectCount">0</span></li>
+            </ul>
+        `)
+        $('nav').toggleClass('transparent')
         $('nav span.questionCount').text(questionCount)
         $('nav span.correctCount').text(correctCount)
         $('nav span.incorrectCount').text(incorrectCount)
 
-        $('section.output').html('')
-        $('section.output').toggleClass('hidden')
+        $('section.output').toggleClass('collapsed expanded')
+        // $('section.output').html('')
+        // $('section.output').toggleClass('hidden')
         $('section.QA').html(`
         <form>
             <fieldset>
@@ -221,12 +231,13 @@ function startButtonListener(){
 
 function loadStartPage(){
     console.log('loading start page')
-    $('section.QA').html('')
     $('section.output').html(`
     <p>These questions will touch on some important issues regarding COVID19. By completing this quiz, you'll know how prepared you are, as well as gain valuable answers after each question. All information is referenced from official sources.</p>
     <button type="button" class="start" name="Start" autofocus>Start Quiz</button>
     <br>`
     )
+    $('section.QA').html('')
+
     startButtonListener();
     $('button.start').focus();
 }
