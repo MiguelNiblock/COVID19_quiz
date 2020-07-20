@@ -13,7 +13,13 @@
 - [x] when radio button is active, make the corresponding label respond as if you were hovering. can a state of one element produce a response in a different one?
 - when a radio input is checked, JQ.toggleClass on all the answers
 - requires undoing current hover response.
-- [ ] make buttons prettier.
+- [x] make buttons prettier.
     - [x] spacing is tricky. Adding padding to section.output, interferes with the .hidden functionality.
 - [ ] disable the default round line around the question, from the fieldset?
 - [x] give the user a cookie in the final page
+
+---
+
+2020.07.19-
+
+- [ ] BUG: In the answers window, you can see text from the collapsed container in the background, although its almost transparent. make it go away somehow. 1. async function to empty content there, a second after it has collapsed?
